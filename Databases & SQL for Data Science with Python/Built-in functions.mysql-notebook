@@ -1,0 +1,521 @@
+{
+    "type": "MySQLNotebook",
+    "version": "1.0",
+    "caption": "Script",
+    "content": "DROP TABLE IF EXISTS PETRESCUE;\n\nCREATE TABLE PETRESCUE (\n    ID INTEGER NOT NULL,\n    ANIMAL VARCHAR(20),\n    QUANTITY INTEGER,\n    COST DECIMAL(6,2),\n    RESCUEDATE DATE,\n    PRIMARY KEY (ID)\n);\n\nINSERT INTO PETRESCUE (ID, ANIMAL, QUANTITY, COST, RESCUEDATE) VALUES \n    (1,'Cat',9,450.09,'2018-05-29'),\n    (2,'Dog',3,666.66,'2018-06-01'),\n    (3,'Dog',1,100.00,'2018-06-04'),\n    (4,'Parrot',2,50.00,'2018-06-04'),\n    (5,'Dog',1,75.75,'2018-06-10'),\n    (6,'Hamster',6,60.60,'2018-06-11'),\n    (7,'Cat',1,44.44,'2018-06-11'),\n    (8,'Goldfish',24,48.48,'2018-06-14'),\n    (9,'Dog',2,222.22,'2018-06-15');\n\n\n# AGGREGATION FUNCTION\n#1. For this query, we will use the function SUM(COLUMN_NAME). The output of this query will be the total value of all elements in the column. The query for this question can be written as:\n\nSELECT SUM(COST) FROM PETRESCUE;\n\n#2.You can further assign a label to the query SUM_OF_COST.\n\nSELECT SUM(COST) AS SUM_OF_COST FROM PETRESCUE;\n\n# For this query, we will use the function MAX(COLUMN_NAME). The output of this query will be the maximum value of all elements in the column. The query for this question can be written as:\n\nSELECT MAX(QUANTITY) FROM PETRESCUE;\n\n# The query can easily be changed to display the minimum quantity using the MIN function instead.\n\nSELECT MIN(QUANTITY) FROM PETRESCUE;\n\n#3.  Write a query that displays the average cost of animals rescued.\n\nSELECT AVG(COST) FROM PETRESCUE;\n\n\n# Scalar Functions and String Functions\n# 1. Write a query that displays the rounded integral cost of each rescue.\n\nSELECT ROUND(COST) FROM PETRESCUE;\n",
+    "options": {
+        "tabSize": 4,
+        "indentSize": 4,
+        "insertSpaces": true,
+        "defaultEOL": "LF",
+        "trimAutoWhitespace": true
+    },
+    "viewState": null,
+    "contexts": [
+        {
+            "state": {
+                "start": 1,
+                "end": 50,
+                "language": "mysql",
+                "result": {
+                    "type": "resultIds",
+                    "list": [
+                        "0ba822f9-c877-4126-dbeb-87af82e5d379",
+                        "9533cb80-6534-4ed3-962d-e007f63a104c",
+                        "33c6cd42-c5a2-42ab-a9c2-d4b1fcb41694",
+                        "b430b43d-46e6-40b1-a70b-2e2511b92036",
+                        "a9b64a61-cbe1-4f2b-9a30-6dd277121772",
+                        "bc314064-de40-4c2d-bbea-b9d41f2052b3",
+                        "891240ba-4878-4cd6-9d18-e1a068fb2981",
+                        "f2ca2740-16ce-4a36-cdb2-d0100f5159a9",
+                        "09524f58-793b-437b-acd5-0c1df5e19862"
+                    ]
+                },
+                "currentHeight": 300,
+                "currentSet": 6,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 31,
+                            "length": 165
+                        },
+                        "contentStart": 33,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 196,
+                            "length": 413
+                        },
+                        "contentStart": 198,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 609,
+                            "length": 249
+                        },
+                        "contentStart": 826,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 858,
+                            "length": 110
+                        },
+                        "contentStart": 921,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 968,
+                            "length": 229
+                        },
+                        "contentStart": 1161,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1197,
+                            "length": 137
+                        },
+                        "contentStart": 1298,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1334,
+                            "length": 105
+                        },
+                        "contentStart": 1407,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1439,
+                            "length": 153
+                        },
+                        "contentStart": 1558,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 1592,
+                            "length": 1
+                        },
+                        "contentStart": 1591,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": [
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "0ba822f9-c877-4126-dbeb-87af82e5d379",
+                    "rows": [
+                        {
+                            "0": "1718.24"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "SUM(COST)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 0s"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 3,
+                    "sql": "\n\n\n# AGGREGATION FUNCTION\n#1. For this query, we will use the function SUM(COLUMN_NAME). The output of this query will be the total value of all elements in the column. The query for this question can be written as:\n\nSELECT SUM(COST) FROM PETRESCUE",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "9533cb80-6534-4ed3-962d-e007f63a104c",
+                    "rows": [
+                        {
+                            "0": "1718.24"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "SUM_OF_COST",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.152ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 4,
+                    "sql": "\n\n#2.You can further assign a label to the query SUM_OF_COST.\n\nSELECT SUM(COST) AS SUM_OF_COST FROM PETRESCUE",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "33c6cd42-c5a2-42ab-a9c2-d4b1fcb41694",
+                    "rows": [
+                        {
+                            "0": 24
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "MAX(QUANTITY)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 0.998ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 5,
+                    "sql": "\n\n# For this query, we will use the function MAX(COLUMN_NAME). The output of this query will be the maximum value of all elements in the column. The query for this question can be written as:\n\nSELECT MAX(QUANTITY) FROM PETRESCUE",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "b430b43d-46e6-40b1-a70b-2e2511b92036",
+                    "rows": [
+                        {
+                            "0": 1
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "MIN(QUANTITY)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 4,
+                                "flags": [
+                                    "SIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 10,
+                                "parameterFormatType": "OneOrZero",
+                                "synonyms": [
+                                    "INTEGER",
+                                    "INT4"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.01ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 6,
+                    "sql": "\n\n# The query can easily be changed to display the minimum quantity using the MIN function instead.\n\nSELECT MIN(QUANTITY) FROM PETRESCUE",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "a9b64a61-cbe1-4f2b-9a30-6dd277121772",
+                    "rows": [
+                        {
+                            "0": "190.915556"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "AVG(COST)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 1 record retrieved in 1.065ms"
+                    },
+                    "totalRowCount": 1,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 7,
+                    "sql": "\n\n#3.  Write a query that displays the average cost of animals rescued.\n\nSELECT AVG(COST) FROM PETRESCUE",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "bc314064-de40-4c2d-bbea-b9d41f2052b3",
+                    "rows": [
+                        {
+                            "0": "450"
+                        },
+                        {
+                            "0": "667"
+                        },
+                        {
+                            "0": "100"
+                        },
+                        {
+                            "0": "50"
+                        },
+                        {
+                            "0": "76"
+                        },
+                        {
+                            "0": "61"
+                        },
+                        {
+                            "0": "44"
+                        },
+                        {
+                            "0": "48"
+                        },
+                        {
+                            "0": "222"
+                        }
+                    ],
+                    "columns": [
+                        {
+                            "title": "ROUND(COST)",
+                            "field": "0",
+                            "dataType": {
+                                "type": 10,
+                                "flags": [
+                                    "UNSIGNED",
+                                    "ZEROFILL"
+                                ],
+                                "numericPrecision": 65,
+                                "numericScale": 30,
+                                "parameterFormatType": "TwoOrOneOrZero",
+                                "synonyms": [
+                                    "FIXED",
+                                    "NUMERIC",
+                                    "DEC"
+                                ]
+                            },
+                            "inPK": false,
+                            "nullable": false,
+                            "autoIncrement": false
+                        }
+                    ],
+                    "executionInfo": {
+                        "text": "OK, 9 records retrieved in 2.137ms"
+                    },
+                    "totalRowCount": 9,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 8,
+                    "sql": "\n\n\n# Scalar Functions and String Functions\n# 1. Write a query that displays the rounded integral cost of each rescue.\n\nSELECT ROUND(COST) FROM PETRESCUE",
+                    "updatable": false,
+                    "fullTableName": ""
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "891240ba-4878-4cd6-9d18-e1a068fb2981",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 17.221ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 0,
+                    "sql": "DROP TABLE IF EXISTS PETRESCUE",
+                    "updatable": false
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "f2ca2740-16ce-4a36-cdb2-d0100f5159a9",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 0 records retrieved in 22.23ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 1,
+                    "sql": "\n\nCREATE TABLE PETRESCUE (\n    ID INTEGER NOT NULL,\n    ANIMAL VARCHAR(20),\n    QUANTITY INTEGER,\n    COST DECIMAL(6,2),\n    RESCUEDATE DATE,\n    PRIMARY KEY (ID)\n)",
+                    "updatable": false
+                },
+                {
+                    "tabId": "7ec0089f-7546-4dfd-a499-a591814fddd7",
+                    "resultId": "09524f58-793b-437b-acd5-0c1df5e19862",
+                    "rows": [],
+                    "executionInfo": {
+                        "text": "OK, 9 rows affected in 4.743ms",
+                        "type": 4
+                    },
+                    "totalRowCount": 0,
+                    "hasMoreRows": false,
+                    "currentPage": 0,
+                    "index": 2,
+                    "sql": "\n\nINSERT INTO PETRESCUE (ID, ANIMAL, QUANTITY, COST, RESCUEDATE) VALUES \n    (1,'Cat',9,450.09,'2018-05-29'),\n    (2,'Dog',3,666.66,'2018-06-01'),\n    (3,'Dog',1,100.00,'2018-06-04'),\n    (4,'Parrot',2,50.00,'2018-06-04'),\n    (5,'Dog',1,75.75,'2018-06-10'),\n    (6,'Hamster',6,60.60,'2018-06-11'),\n    (7,'Cat',1,44.44,'2018-06-11'),\n    (8,'Goldfish',24,48.48,'2018-06-14'),\n    (9,'Dog',2,222.22,'2018-06-15')",
+                    "updatable": false
+                }
+            ]
+        },
+        {
+            "state": {
+                "start": 1,
+                "end": 50,
+                "language": "mysql",
+                "currentSet": 1,
+                "statements": [
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 0,
+                            "length": 31
+                        },
+                        "contentStart": 1,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 31,
+                            "length": 165
+                        },
+                        "contentStart": 33,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 196,
+                            "length": 413
+                        },
+                        "contentStart": 198,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 609,
+                            "length": 240
+                        },
+                        "contentStart": 825,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 849,
+                            "length": 34
+                        },
+                        "contentStart": 851,
+                        "state": 0
+                    },
+                    {
+                        "delimiter": ";",
+                        "span": {
+                            "start": 883,
+                            "length": 1
+                        },
+                        "contentStart": 882,
+                        "state": 3
+                    }
+                ]
+            },
+            "data": []
+        }
+    ]
+}
