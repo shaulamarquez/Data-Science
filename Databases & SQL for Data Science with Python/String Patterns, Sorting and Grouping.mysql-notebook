@@ -10,7 +10,33 @@
         "defaultEOL": "LF",
         "trimAutoWhitespace": true
     },
-    "viewState": null,
+    "viewState": {
+        "cursorState": [
+            {
+                "inSelectionMode": true,
+                "selectionStart": {
+                    "lineNumber": 149,
+                    "column": 27
+                },
+                "position": {
+                    "lineNumber": 1,
+                    "column": 1
+                }
+            }
+        ],
+        "viewState": {
+            "scrollLeft": 0,
+            "firstPosition": {
+                "lineNumber": 1,
+                "column": 1
+            },
+            "firstPositionDeltaTop": 0
+        },
+        "contributionsState": {
+            "editor.contrib.folding": {},
+            "editor.contrib.wordHighlighter": false
+        }
+    },
     "contexts": [
         {
             "state": {
@@ -20,7 +46,7 @@
                 "result": {
                     "type": "resultIds",
                     "list": [
-                        "8596dd62-fac4-485a-96a8-d4c0be504d90"
+                        "a1013024-474e-428c-cd6b-0208a4d7a3d4"
                     ]
                 },
                 "currentHeight": 300,
@@ -273,8 +299,8 @@
             },
             "data": [
                 {
-                    "tabId": "2ae4f958-6d49-4e4f-b7db-2be77a6c145a",
-                    "resultId": "8596dd62-fac4-485a-96a8-d4c0be504d90",
+                    "tabId": "35f2ea12-f59e-4dfa-f341-037314739101",
+                    "resultId": "a1013024-474e-428c-cd6b-0208a4d7a3d4",
                     "rows": [
                         {
                             "0": "2\r",
