@@ -76,4 +76,4 @@ def reg_year_display(input_region,input_year):
             dcc.Graph(figure=fig2) ]
 if __name__ == '__main__':
     app.run_server()
-    
+     
