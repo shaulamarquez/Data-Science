@@ -15,5 +15,6 @@ In this capstone, we will predict if the Falcon 9 first stage will land successf
 - Exploratory Data Analysis using SQL
 - Exploratory Data Analysis for Data Visualization
 - Building Dashboard with Plotly Dash
+- Interactive Visual Analytics with Folium Lab
 - Predictive Analysis (Classification)
 - Present your data using PowerPoint(PDF)
